@@ -26,11 +26,10 @@ function Carrossel({
         </>
       )}
       <Slider>
-        {videos.map((video, index) => {
-          if (ignoreFirstVideo && index === 0) {
-            return null;
-          }
-
+      {videos.map((video, index) => {
+         if (ignoreFirstVideo && index === 0) {
+          return null;
+        }
           return (
             <SliderItem key={video.titulo}>
               <VideoCard
