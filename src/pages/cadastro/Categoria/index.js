@@ -31,7 +31,9 @@ function CadastroCategoria(){
 
     useEffect(()=>{
     
-        const URL = 'http://localhost:8080/categorioas';
+        const URL = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8080/categorioas'
+        : 'https://iagoflix.herokuapp.com/categorioas';
 
         fetch(URL).then(async(respostaDoServidor) =>{
             const response = await respostaDoServidor.json();
